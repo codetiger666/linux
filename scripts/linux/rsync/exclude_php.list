@@ -1,0 +1,11 @@
+php56
+php55
+php54
+#debug-php70
+*debug*
+#debug-php54
+#debug-php55
+#debug-php56
+*test*
+httpsmirror
+mirror
