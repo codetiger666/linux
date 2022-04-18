@@ -40,8 +40,8 @@ GetXray(){
     cd /usr/local/
     mkdir xray
     cd xray
-    wget https://git.gybyt.cn/niening/linux/raw/branch/master/src/linux/linuxsoft/xray.zip --no-check-certificate
-    unzip xray.zip
+    wget "https://proxyurl.codetiger.workers.dev/https://github.com/XTLS/Xray-core/releases/download/v1.5.4/Xray-linux-64.zip" --no-check-certificate
+    unzip Xray-linux-64.zip
     MakeConfig
 
 }
