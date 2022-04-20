@@ -1,4 +1,4 @@
-upstream wss {
+upstream ws {
 	server 后端ip:后端端口;
 }
 server {
@@ -7,23 +7,23 @@ server {
 		
         #access_log  logs/host.access.log  main;
         location / {
-        	proxy_redirect     off;
-        	proxy_next_upstream error timeout invalid_header http_500 http_502 http_503 http_504;
-        	proxy_max_temp_file_size   0;
-        	proxy_connect_timeout      90;
-        	proxy_send_timeout         90;
-        	proxy_read_timeout         90;
-        	proxy_buffer_size          4k;
-        	proxy_buffers              4 32k;
-        	proxy_busy_buffers_size    64k;
-        	proxy_temp_file_write_size 64k;
-        	proxy_http_version 1.1; #配置http版本
+            proxy_redirect     off;
+            proxy_next_upstream error timeout invalid_header http_500 http_502 http_503 http_504;
+            proxy_max_temp_file_size   0;
+            proxy_connect_timeout      90;
+            proxy_send_timeout         90;
+            proxy_read_timeout         90;
+            proxy_buffer_size          4k;
+            proxy_buffers              4 32k;
+            proxy_busy_buffers_size    64k;
+            proxy_temp_file_write_size 64k;
+            proxy_http_version 1.1; #配置http版本
             proxy_set_header Upgrade $http_upgrade; #配置协议头升级
             proxy_set_header Connection "upgrade";  #升级协议头
             proxy_connect_timeout 4s;   #配置点1
             proxy_read_timeout 60s;     #配置点2，如果没效，可以考虑这个时间配置长一点
             proxy_send_timeout 12s;     #配置点3
-            proxy_pass				   http://wss;
+            proxy_pass				   http://ws;
         }
         #error_page  404              /404.html;
         error_page   500 502 503 504  /50x.html;

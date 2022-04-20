@@ -2,38 +2,14 @@ server
     {
         listen       80;
         listen	     [::]:80;
-        server_name  $domain;
+        server_name  域名;
         #charset koi8-r;
 
-        access_log /home/wwwlogs/域名.log main;
-		rewrite ^/(.*) https://$host/$1 permanent;
-    }
+        location / {
+            index index.html index.htm index.php default.html default.htm default.php;
+            root  /home/wwwroot/域名;
+			#try_files $uri $uri/ /index.php;
 
-
-server
-    {
-        listen 443 ssl http2;
-        listen [::]:443 ssl http2;
-        server_name 域名;
-        index index.html index.htm index.php default.html default.htm default.php;
-        root  /home/wwwroot/域名;
-
-        # 证书文件位置
-        ssl_certificate 证书文件位置;
-        ssl_certificate_key 证书key位置;
-        ssl_session_timeout 5m;
-        ssl_protocols TLSv1.1 TLSv1.2 TLSv1.3;
-        ssl_prefer_server_ciphers on;
-        ssl_ciphers "TLS13-AES-256-GCM-SHA384:TLS13-CHACHA20-POLY1305-SHA256:TLS13-AES-128-GCM-SHA256:TLS13-AES-128-CCM-8-SHA256:TLS13-AES-128-CCM-SHA256:EECDH+CHACHA20:EECDH+CHACHA20-draft:EECDH+AES128:RSA+AES128:EECDH+AES256:RSA+AES256:EECDH+3DES:RSA+3DES:!MD5";
-        ssl_session_cache builtin:1000 shared:SSL:10m;
-        # 设置https请求头
-        proxy_set_header X-Forwarded-Proto https;
-        proxy_redirect http:// https://;
-        proxy_set_header Host $host:$server_port;
- 
-
-		location / {
-			try_files $uri $uri/ /index.php;
 		}
 	 
 		location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$

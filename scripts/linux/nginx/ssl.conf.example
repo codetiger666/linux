@@ -1,10 +1,10 @@
 server {
         listen       80;
         # 仅需使用ipv6时取消注释
-        #listen       [::]:80;
+        listen       [::]:80;
         server_name  域名;
 
-        access_log 日志文件位置;
+        access_log /home/wwwlogs/域名.log main;
         # 需要强制使用https时打开
         #rewrite ^/(.*) https://$host$1 permanent;
         location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$
@@ -13,7 +13,7 @@ server {
         }
         location / {
         	index index.html index.htm;
-        	root 网站根目录;
+        	root           /home/wwwroot/域名;
         }
     
         
@@ -23,10 +23,10 @@ server
     {
         listen 443 ssl http2;
         # 仅需使用ipv6时取消注释
-        #listen [::]:443 ssl http2;
+        listen [::]:443 ssl http2;
         server_name 域名;
         index index.html index.htm default.html default.htm;
-        root  网站根目录;
+        root           /home/wwwroot/域名;
 
 		# 证书文件位置
         ssl_certificate 证书文件位置;
@@ -41,5 +41,5 @@ server
             expires      30d;
         }
     
-        access_log 日志文件位置;
+        access_log /home/wwwlogs/域名.log main;
     }
