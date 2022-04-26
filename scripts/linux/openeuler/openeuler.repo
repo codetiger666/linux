@@ -34,12 +34,6 @@ baseurl=https://repo.huaweicloud.com/openeuler/openEuler-22.03-LTS/update/$basea
 enabled=1
 gpgcheck=0
 
-[epel]
-name=epel
-baseurl=https://opentuna.cn/epel/7/$basearch/
-enabled=1
-gpgcheck=0
-
 [mysql]
 name=mysql
 baseurl=https://opentuna.cn/mysql/yum/mysql-8.0-community-el8-$basearch/
