@@ -60,6 +60,6 @@ gpgcheck=0
 
 [nnproj]
 name=nnproj
-baseurl=https://vigorous-fermat-123799.netlify.app/centos/7/$basearch/
+baseurl=https://vigorous-fermat-123799.netlify.app/openeuler/openEuler-22.03-LTS/$basearch/
 enabled=1
 gpgcheck=0
