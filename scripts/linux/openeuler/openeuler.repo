@@ -40,12 +40,6 @@ baseurl=https://opentuna.cn/mysql/yum/mysql-8.0-community-el8-$basearch/
 enabled=1
 gpgcheck=0
 
-[docker-ce]
-name=docker-ce
-baseurl=https://opentuna.cn/docker-ce/linux/centos/8/$basearch/stable/
-enabled=1
-gpgcheck=0
-
 [remi_safe]
 name=remi_safe
 baseurl=https://mirrors.aliyun.com/remi/enterprise/8/safe/$basearch/
