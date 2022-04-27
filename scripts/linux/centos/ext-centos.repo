@@ -1,0 +1,60 @@
+[base]
+name=CentOS-$releasever - Base
+baseurl=http://mirror.ufs.ac.za/centos/$releasever/os/$basearch/
+enabled=1
+gpgcheck=0 
+
+[updates]
+name=CentOS-$releasever - Updates
+baseurl=http://mirror.ufs.ac.za/centos/$releasever/updates/$basearch/
+enabled=1
+gpgcheck=0
+
+[extras]
+name=CentOS-$releasever - Extras
+baseurl=http://mirror.ufs.ac.za/centos/$releasever/extras/$basearch/
+enabled=1
+gpgcheck=0
+
+[centosplus]
+name=CentOS-$releasever - Plus
+baseurl=http://mirror.ufs.ac.za/centos/$releasever/centosplus/$basearch/
+gpgcheck=1
+enabled=0
+
+[epel]
+name=Extra Packages for Enterprise Linux 7 - $basearch
+metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-7&arch=$basearch&infra=$infra&content=$contentdir
+failovermethod=priority
+enabled=1
+gpgcheck=0
+
+[remi_safe]
+name=remi_safe
+baseurl=http://remi.mirrors.arminco.com/enterprise/$releasever/safe/$basearch/
+enabled=1
+gpgcheck=0
+
+[remi]
+name=remi
+baseurl=http://remi.mirrors.arminco.com/enterprise/$releasever/remi/$basearch/
+enabled=1
+gpgcheck=0
+
+[mysql80-community]
+name=MySQL 8.0 Community Server
+baseurl=http://repo.mysql.com/yum/mysql-8.0-community/el/8/$basearch/
+enabled=1
+gpgcheck=0
+
+[mysql-connectors-community]
+name=MySQL Connectors Community
+baseurl=http://repo.mysql.com/yum/mysql-connectors-community/el/8/$basearch/
+enabled=1
+gpgcheck=0
+
+[mysql-tools-community]
+name=MySQL Tools Community
+baseurl=http://repo.mysql.com/yum/mysql-tools-community/el/8/$basearch/
+enabled=1
+gpgcheck=0

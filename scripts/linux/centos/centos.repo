@@ -29,7 +29,7 @@ failovermethod=priority
 enabled=1
 gpgcheck=0
 
-[_remi_safe]
+[remi_safe]
 name=remi_safe
 baseurl=https://mirrors.tuna.tsinghua.edu.cn/remi/enterprise/$releasever/safe/$basearch/
 enabled=1
