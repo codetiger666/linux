@@ -56,7 +56,7 @@ gpgcheck=0
 [mysql]
 name=mysql
 baseurl=https://opentuna.cn/mysql/yum/mysql-5.7-community-el$releasever-$basearch/
-enabled=0
+enabled=1
 gpgcheck=0
 
 [sqlserver]
