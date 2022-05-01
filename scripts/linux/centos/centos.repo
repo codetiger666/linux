@@ -1,72 +1,72 @@
-[base]
-name=CentOS-$releasever - Base
-baseurl=https://opentuna.cn/centos/$releasever/os/$basearch/
-enabled=1
-gpgcheck=0 
-
-[updates]
-name=CentOS-$releasever - Updates
-baseurl=https://opentuna.cn/centos/$releasever/updates/$basearch/
-enabled=1
+[home_Centos_base]
+name=home_Centos_base
+baseurl=https://opentuna.cn/centos/7/os/x86_64/
 gpgcheck=0
 
-[extras]
-name=CentOS-$releasever - Extras
-baseurl=https://opentuna.cn/centos/$releasever/extras/$basearch/
-enabled=1
+#released updates
+[home_Centos_updates]
+name=home_Centos_Updates
+baseurl=https://opentuna.cn/centos/7/updates/x86_64/
 gpgcheck=0
 
-[centosplus]
-name=CentOS-$releasever - Plus
-baseurl=https://opentuna.cn/centos/$releasever/centosplus/$basearch/
+#additional packages that may be useful
+[home_Centos_extras]
+name=home_Centos_Extras
+baseurl=https://opentuna.cn/centos/7/extras/x86_64/
+gpgcheck=0
+
+#additional packages that extend functionality of existing packages
+[home_Centos_centosplus]
+name=home_Centos_Plus
+baseurl=https://opentuna.cn/centos/7/centosplus/x86_64/
 gpgcheck=1
 enabled=0
 
-[epel]
-name=Extra Packages for Enterprise Linux $releasever - $basearch
-baseurl=https://opentuna.cn/epel/$releasever/$basearch
+[home_epel]
+name=home_epel
+baseurl=https://opentuna.cn/epel/7/x86_64/
 failovermethod=priority
 enabled=1
 gpgcheck=0
 
-[remi_safe]
-name=remi_safe
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/remi/enterprise/$releasever/safe/$basearch/
+[home_docker_stable]
+name=home_docker_stable
+baseurl=https://opentuna.cn/docker-ce/linux/centos/7/x86_64/stable/
 enabled=1
 gpgcheck=0
 
-[remi]
-name=remi
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/remi/enterprise/$releasever/remi/$basearch/
+[home_remi]
+name=home_remi
+baseurl=https://mirrors.aliyun.com/remi/enterprise/7/
 enabled=1
 gpgcheck=0
 
-[docker]
-name=docker
-baseurl=https://opentuna.cn/docker-ce/linux/centos/$releasever/$basearch/stable/
-enabled=1
-gpgcheck=0
-
-[mariadb]
-name=maradb
-baseurl=https://opentuna.cn/mariadb/yum/10.3/centos$releasever-amd64/
-enabled=1
-gpgcheck=0
-
-[mysql]
-name=mysql
-baseurl=https://opentuna.cn/mysql/yum/mysql-5.7-community-el$releasever-$basearch/
-enabled=1
-gpgcheck=0
-
-[sqlserver]
-name=sqlserver
-baseurl=https://packages.microsoft.com/rhel/$releasever/mssql-server-2017/
+[home_mariadb]
+name=home_maradb
+baseurl=https://opentuna.cn/mariadb/yum/10.8.2/centos/7/x86_64/
 enabled=0
 gpgcheck=0
 
-[nnproj]
-name=nnproj
+[home_mysql]
+name=home_mysql
+baseurl=https://opentuna.cn/mysql/yum/mysql-8.0-community-el7-x86_64/
+enabled=1
+gpgcheck=0
+
+[home_nnproj]
+name=home_nnproj
 baseurl=https://vigorous-fermat-123799.netlify.app/centos/$releasever/$basearch/
 enabled=1
+gpgcheck=0
+
+[mssql2017]
+name=mssql2017
+baseurl=https://packages.microsoft.com/rhel/7/mssql-server-2017/
+enabled=0
+gpgcheck=0
+
+[vscode]
+name=vscode
+baseurl=https://packages.microsoft.com/yumrepos/vscode/
+enabled=0
 gpgcheck=0
