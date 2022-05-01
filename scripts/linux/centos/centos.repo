@@ -1,77 +1,77 @@
 [Centos_base]
 name=Centos_base
-baseurl=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/os.list
+mirrorlist=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/os.list
 gpgcheck=0
 
 [Centos_updates]
 name=Centos_Updates
-baseurl=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/updates.list
+mirrorlist=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/updates.list
 gpgcheck=0
 
 #additional packages that may be useful
 [Centos_extras]
 name=Centos_Extras
-baseurl=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/extras.list
+mirrorlist=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/extras.list
 gpgcheck=0
 
 #additional packages that extend functionality of existing packages
 [Centos_centosplus]
 name=Centos_Plus
-baseurl=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/centosplus.list
+mirrorlist=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/centosplus.list
 gpgcheck=1
 enabled=0
 
 [epel]
 name=epel
-baseurl=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/epel.list
+mirrorlist=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/epel.list
 failovermethod=priority
 enabled=1
 gpgcheck=0
 
 [docker_stable]
 name=docker_stable
-baseurl=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/docker.list
+mirrorlist=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/docker.list
 enabled=1
 gpgcheck=0
 
 [remi]
 name=remi
-baseurl=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/remi.list
+mirrorlist=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/remi.list
 enabled=1
 gpgcheck=0
 
 [remi_safe]
 name=remi_safe
-baseurl=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/remi_safe.list
+mirrorlist=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/remi_safe.list
 enabled=1
 gpgcheck=0
 
 [mariadb]
 name=maradb
-baseurl=https://opentuna.cn/mariadb/yum/10.8.2/centos/$releasever/$basearch/
+mirrorlist=https://opentuna.cn/mariadb/yum/10.8.2/centos/$releasever/$basearch/
 enabled=0
 gpgcheck=0
 
 [mysql]
 name=mysql
-baseurl=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/mysql.list
+mirrorlist=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/mysql.list
 enabled=1
 gpgcheck=0
 
 [nnproj]
 name=nnproj
-baseurl=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/nnproj.list
+mirrorlist=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/nnproj.list
 enabled=1
 gpgcheck=0
 
 [mssql2017]
 name=mssql2017
-baseurl=https://packages.microsoft.com/rhel/$releasever/mssql-server-2017/
+mirrorlist=https://packages.microsoft.com/rhel/$releasever/mssql-server-2017/
 enabled=0
 gpgcheck=0
 
 [vscode]
 name=vscode
-baseurl=https://packages.microsoft.com/yumrepos/vscode/
+mirrorlist=https://packages.microsoft.com/yumrepos/vscode/
 enabled=0
 gpgcheck=0
