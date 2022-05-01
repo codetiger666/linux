@@ -1,43 +1,48 @@
 [Centos_base]
 name=Centos_base
-baseurl=https://opentuna.cn/centos/$releasever/os/$basearch/
+baseurl=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/os.list
 gpgcheck=0
 
-#released updates
 [Centos_updates]
 name=Centos_Updates
-baseurl=https://opentuna.cn/centos/$releasever/updates/$basearch/
+baseurl=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/updates.list
 gpgcheck=0
 
 #additional packages that may be useful
 [Centos_extras]
 name=Centos_Extras
-baseurl=https://opentuna.cn/centos/$releasever/extras/$basearch/
+baseurl=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/extras.list
 gpgcheck=0
 
 #additional packages that extend functionality of existing packages
 [Centos_centosplus]
 name=Centos_Plus
-baseurl=https://opentuna.cn/centos/$releasever/centosplus/$basearch/
+baseurl=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/centosplus.list
 gpgcheck=1
 enabled=0
 
 [epel]
 name=epel
-baseurl=https://opentuna.cn/epel/$releasever/$basearch/
+baseurl=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/epel.list
 failovermethod=priority
 enabled=1
 gpgcheck=0
 
 [docker_stable]
 name=docker_stable
-baseurl=https://opentuna.cn/docker-ce/linux/centos/$releasever/$basearch/stable/
+baseurl=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/docker.list
 enabled=1
 gpgcheck=0
 
 [remi]
 name=remi
-baseurl=https://mirrors.aliyun.com/remi/enterprise/$releasever/remi/$basearch/
+baseurl=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/remi.list
+enabled=1
+gpgcheck=0
+
+[remi_safe]
+name=remi_safe
+baseurl=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/remi_safe.list
 enabled=1
 gpgcheck=0
 
@@ -49,13 +54,13 @@ gpgcheck=0
 
 [mysql]
 name=mysql
-baseurl=https://opentuna.cn/mysql/yum/mysql-8.0-community-el$releasever-$basearch/
+baseurl=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/mysql.list
 enabled=1
 gpgcheck=0
 
 [nnproj]
 name=nnproj
-baseurl=https://vigorous-fermat-123799.netlify.app/centos/$releasever/$basearch/
+baseurl=https://gitee.com/nnproj/linux/raw/master/scripts/linux/centos/mirrorlist/nnproj.list
 enabled=1
 gpgcheck=0
 

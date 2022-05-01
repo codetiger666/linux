@@ -1,0 +1,4 @@
+https://mirrors.aliyun.com/remi/enterprise/$releasever/safe/$basearch/
+https://repo.huaweicloud.com/remi/enterprise/$releasever/safe/$basearch/
+https://mmirrors.tuna.tsinghua.edu.cn/remi/enterprise/$releasever/safe/$basearch/
+https://mirrors.ustc.edu.cn/remi/enterprise/$releasever/safe/$basearch/
