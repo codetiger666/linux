@@ -55,7 +55,7 @@ gpgcheck=0
 
 [nnproj]
 name=nnproj
-baseurl=https://vigorous-fermat-123$releasever99.netlify.app/centos/$releasever/$basearch/
+baseurl=https://vigorous-fermat-123799.netlify.app/centos/$releasever/$basearch/
 enabled=1
 gpgcheck=0
 
