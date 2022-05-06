@@ -68,6 +68,7 @@ generate_config()
     echo -e '2: cache'
     echo -e '3: ssl'
     echo -e '4: php'
+    echo -e '5: file'
     read -p "请选择要生成的配置:" selectd
 
     case $selectd in
@@ -103,6 +104,12 @@ generate_config()
         curl https://gitee.com/nnproj/linux/raw/master/scripts/linux/nginx/php.conf.example>$base_path$domain.conf
         sed -i "s/域名/$domain/g" $base_path$domain.conf
         ;;
+    5)   
+        echo -e "${yellow}将要生成file${none}" 
+        read -p "请输入域名:" domain
+        curl https://gitee.com/nnproj/linux/raw/master/scripts/linux/nginx/file.conf.example>$base_path$domain.conf
+        sed -i "s/域名/$domain/g" $base_path$domain.conf
+        ;;
     *)
         echo -e "${red}请输入正确的选项${none}"
     esac
@@ -133,7 +140,7 @@ install_lnmp()
         curl https://gitee.com/nnproj/linux/raw/master/scripts/linux/nginx/php.conf.example>"$base_path"default.conf
         sed -i "s/域名/localhost/g" "$base_path"default.conf
         sed -i "s/listen       80;/listen       80      default_server;/g" "$base_path"default.conf
-        sed -i "s/listen	    [::]:80;/listen	    [::]:80      default_server;/g" "$base_path"default.conf
+        sed -i "s/listen        [::]:80;/listen        [::]:80      default_server;/g" "$base_path"default.conf
         systemctl start nginx
         systemctl enable nginx
         ;;

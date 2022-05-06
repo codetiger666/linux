@@ -1,28 +1,28 @@
 server 
     {
         listen       80;
-        listen	     [::]:80;
+        listen       [::]:80;
         server_name  域名;
         #charset koi8-r;
 
         location / {
-            index index.html index.htm index.php default.html default.htm default.php;
-            root  /home/wwwroot/域名;
-			#try_files $uri $uri/ /index.php;
+            index    index.html index.htm index.php default.html default.htm default.php;
+            root     /home/wwwroot/域名;
+            #try_files $uri $uri/ /index.php;
 
-		}
-	 
-		location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$
-			{
-				expires      30d;
-			}
+        }
+     
+        location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$
+            {
+                expires      30d;
+            }
 
         location ~ \.php$ {
-	        root           /home/wwwroot/域名;
-            fastcgi_pass   127.0.0.1:9000;
-            fastcgi_index  index.php;
-            fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
-            include        fastcgi_params;
+            root                      /home/wwwroot/域名;
+            fastcgi_pass              127.0.0.1:9000;
+            fastcgi_index             index.php;
+            fastcgi_param             SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+            include                   fastcgi_params;
         }
         access_log /home/wwwlogs/域名.log main;
     }
