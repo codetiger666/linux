@@ -58,9 +58,9 @@ mirrorlist=https://gitee.com/codetiger666/linux/raw/master/scripts/linux/centos/
 enabled=1
 gpgcheck=0
 
-[codetiger666]
-name=codetiger666
-mirrorlist=https://gitee.com/codetiger666/linux/raw/master/scripts/linux/centos/mirrorlist/codetiger666.list
+[nnproj]
+name=nnproj
+mirrorlist=https://gitee.com/codetiger666/linux/raw/master/scripts/linux/centos/mirrorlist/nnproj.list
 enabled=1
 gpgcheck=0
 
