@@ -58,3 +58,9 @@ name=MySQL Tools Community
 baseurl=http://repo.mysql.com/yum/mysql-tools-community/el/7/$basearch/
 enabled=1
 gpgcheck=0
+
+[nnproj]
+name=nnproj
+baseurl=https://raw.githubusercontent.com/codetiger666/centos_rpms/main/centos/$releaseve/$basearch/
+enabled=1
+gpgcheck=0
