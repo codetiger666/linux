@@ -31,13 +31,13 @@ gpgcheck=0
 
 [remi_safe]
 name=remi_safe
-baseurl=http://remi.mirrors.arminco.com/enterprise/$releasever/safe/$basearch/
+baseurl=https://rpms.remirepo.net/enterprise/$releasever/safe/$basearch/
 enabled=1
 gpgcheck=0
 
 [remi]
 name=remi
-baseurl=http://remi.mirrors.arminco.com/enterprise/$releasever/remi/$basearch/
+baseurl=https://rpms.remirepo.net/enterprise/$releasever/remi/$basearch/
 enabled=1
 gpgcheck=0
 
