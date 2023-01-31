@@ -1,0 +1,67 @@
+[BaseOS]
+name=CentOS-$releasever - Base
+baseurl=https://mirrors.ustc.edu.cn/rocky/$releasever/BaseOS/$basearch/os/
+enabled=1
+gpgcheck=0
+
+[AppStream]
+name=CentOS-$releasever - AppStream
+baseurl=https://mirrors.ustc.edu.cn/rocky/$releasever/AppStream/$basearch/os/
+enabled=1
+gpgcheck=0
+
+[PowerTools]
+name=CentOS-$releasever - PowerTools
+baseurl=https://mirrors.ustc.edu.cn/rocky/$releasever/PowerTools/$basearch/os/
+enabled=0
+gpgcheck=0
+
+[extras]
+name=CentOS-$releasever - Extras
+baseurl=https://mirrors.ustc.edu.cn/rocky/$releasever/extras/$basearch/os/
+enabled=1
+gpgcheck=0
+
+[centosplus]
+name=CentOS-$releasever - Plus
+baseurl=https://mirrors.ustc.edu.cn/rocky/$releasever/centosplus/$basearch/os/
+gpgcheck=0
+enabled=0
+
+[epel-source]
+name=Extra Packages for Enterprise Linux $releasever - $basearch - Source
+baseurl=https://mirrors.ustc.edu.cn/epel/$releasever/Everything/$basearch/
+failovermethod=priority
+enabled=1
+gpgcheck=0
+
+[remi_safe]
+name=remi_safe
+baseurl=https://mirrors.ustc.edu.cn/remi/enterprise/$releasever/safe/$basearch/
+enabled=1
+gpgcheck=0
+
+[remi]
+name=remi
+baseurl=https://mirrors.ustc.edu.cn/remi/enterprise/$releasever/remi/$basearch/
+enabled=1
+gpgcheck=0
+
+[docker]
+name=docker
+baseurl=https://mirrors.ustc.edu.cn/docker-ce/linux/centos/$releasever/$basearch/stable/
+enabled=1
+gpgcheck=0
+
+
+[mysql]
+name=mysql
+baseurl=https://mirrors.ustc.edu.cn/mysql-repo/yum/mysql-8.0-community/el/$releasever/$basearch/
+enabled=1
+gpgcheck=0
+
+[sqlserver]
+name=sqlserver
+baseurl=https://packages.microsoft.com/rhel/$releasever/mssql-server-2017/
+enabled=0
+gpgcheck=0
