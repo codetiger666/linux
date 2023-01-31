@@ -10,10 +10,34 @@ baseurl=https://mirrors.ustc.edu.cn/rocky/$releasever/AppStream/$basearch/os/
 enabled=1
 gpgcheck=0
 
-[PowerTools]
-name=CentOS-$releasever - PowerTools
-baseurl=https://mirrors.ustc.edu.cn/rocky/$releasever/PowerTools/$basearch/os/
-enabled=0
+[CRB]
+name=CentOS-$releasever - CRB
+baseurl=https://mirrors.ustc.edu.cn/rocky/$releasever/CRB/$basearch/os/
+enabled=1
+gpgcheck=0
+
+[HighAvailability]
+name=CentOS-$releasever - HighAvailability
+baseurl=https://mirrors.ustc.edu.cn/rocky/$releasever/HighAvailability/$basearch/os/
+enabled=1
+gpgcheck=0
+
+[NFV]
+name=CentOS-$releasever - NFV
+baseurl=https://mirrors.ustc.edu.cn/rocky/$releasever/NFV/$basearch/os/
+enabled=1
+gpgcheck=0
+
+[RT]
+name=CentOS-$releasever - RT
+baseurl=https://mirrors.ustc.edu.cn/rocky/$releasever/RT/$basearch/os/
+enabled=1
+gpgcheck=0
+
+[ResilientStorage]
+name=CentOS-$releasever - ResilientStorage
+baseurl=https://mirrors.ustc.edu.cn/rocky/$releasever/ResilientStorage/$basearch/os/
+enabled=1
 gpgcheck=0
 
 [extras]
@@ -21,12 +45,6 @@ name=CentOS-$releasever - Extras
 baseurl=https://mirrors.ustc.edu.cn/rocky/$releasever/extras/$basearch/os/
 enabled=1
 gpgcheck=0
-
-[centosplus]
-name=CentOS-$releasever - Plus
-baseurl=https://mirrors.ustc.edu.cn/rocky/$releasever/centosplus/$basearch/os/
-gpgcheck=0
-enabled=0
 
 [epel-source]
 name=Extra Packages for Enterprise Linux $releasever - $basearch - Source
