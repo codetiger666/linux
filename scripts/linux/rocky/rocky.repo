@@ -78,6 +78,12 @@ baseurl=https://mirrors.ustc.edu.cn/mysql-repo/yum/mysql-8.0-community/el/$relea
 enabled=1
 gpgcheck=0
 
+[codetiger]
+name=sqlserver
+mirrorlist=https://gitee.com/codetiger666/linux/raw/master/scripts/linux/rocky/mirrorlist/nnproj.list
+enabled=0
+gpgcheck=0
+
 [sqlserver]
 name=sqlserver
 baseurl=https://packages.microsoft.com/rhel/$releasever/mssql-server-2017/
