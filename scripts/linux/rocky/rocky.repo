@@ -81,7 +81,7 @@ gpgcheck=0
 [codetiger]
 name=sqlserver
 mirrorlist=https://gitee.com/codetiger666/linux/raw/master/scripts/linux/rocky/mirrorlist/nnproj.list
-enabled=0
+enabled=1
 gpgcheck=0
 
 [sqlserver]
