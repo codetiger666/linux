@@ -1,13 +1,15 @@
 [Unit]
 Description=nginx
 Documentation=http://nginx.org/en/docs/
-After=network.target remote-fs.target nss-lookup.target
+After=network-online.target
+Before=nss-lookup.target
+Wants=network-online.target nss-lookup.target
 
 [Service]
 Type=forking
-ExecStart=/usr/sbin/nginx
-ExecReload=/usr/sbin/nginx -s reload
-ExecStop=/usr/sbin/nginx -s stop
+ExecStart=/sbin/nginx
+ExecReload=/sbin/nginx -s reload
+ExecStop=/sbin/nginx -s stop
 PIDFile=/var/run/nginx.pid
 
 [Install]
