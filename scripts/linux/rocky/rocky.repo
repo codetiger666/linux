@@ -79,10 +79,11 @@ enabled=1
 gpgcheck=0
 
 [codetiger]
-name=sqlserver
+name=codetiger
 mirrorlist=https://gitee.com/codetiger666/linux/raw/master/scripts/linux/rocky/mirrorlist/nnproj.list
 enabled=1
 gpgcheck=0
+priority=1
 
 [sqlserver]
 name=sqlserver
