@@ -62,5 +62,5 @@ gpgcheck=0
 [nnproj]
 name=nnproj
 baseurl=https://codetiger666.github.io/centos_rpms/centos/$releasever/$basearch/
-enabled=1
+enabled=0
 gpgcheck=0
