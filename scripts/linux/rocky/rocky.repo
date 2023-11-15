@@ -74,7 +74,7 @@ gpgcheck=0
 
 [mysql]
 name=mysql
-baseurl=https://mirrors.ustc.edu.cn/mysql-repo/yum/mysql-8.0-community/el/$releasever/$basearch/
+baseurl=http://repo.mysql.com/yum/mysql-cluster-8.0-community/el/$releasever/$basearch/
 enabled=1
 gpgcheck=0
 
