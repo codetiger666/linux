@@ -2,7 +2,7 @@
 # 应用名称
 APP_NAME=blog-view
 # 应用运行目录
-PROGRAM_PATH=(dirname "$(realpath "$0")")
+PROGRAM_PATH=$(dirname "$(realpath "$0")")
 # jvm参数
 JAVA_OPS="-Xmx256m -Xms128m -XX:MaxMetaspaceSize=128m"
 # java 命令行参数

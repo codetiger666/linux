@@ -2,7 +2,7 @@
 # 应用名称
 APP_NAME=app
 # 应用运行目录
-PROGRAM_PATH=(dirname "$(realpath "$0")")
+PROGRAM_PATH=$(dirname "$(realpath "$0")")
 
 case "$1" in
 start)
