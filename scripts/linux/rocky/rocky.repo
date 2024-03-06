@@ -1,76 +1,75 @@
 [BaseOS]
 name=CentOS-$releasever - Base
-baseurl=https://mirrors.ustc.edu.cn/rocky/$releasever/BaseOS/$basearch/os/
+baseurl=https://download.rockylinux.org/pub/rocky/$releasever/BaseOS/$basearch/os/
 enabled=1
 gpgcheck=0
 
 [AppStream]
 name=CentOS-$releasever - AppStream
-baseurl=https://mirrors.ustc.edu.cn/rocky/$releasever/AppStream/$basearch/os/
+baseurl=https://download.rockylinux.org/pub/rocky/$releasever/AppStream/$basearch/os/
 enabled=1
 gpgcheck=0
 
 [CRB]
 name=CentOS-$releasever - CRB
-baseurl=https://mirrors.ustc.edu.cn/rocky/$releasever/CRB/$basearch/os/
+baseurl=https://download.rockylinux.org/pub/rocky/$releasever/CRB/$basearch/os/
 enabled=1
 gpgcheck=0
 
 [HighAvailability]
 name=CentOS-$releasever - HighAvailability
-baseurl=https://mirrors.ustc.edu.cn/rocky/$releasever/HighAvailability/$basearch/os/
+baseurl=https://download.rockylinux.org/pub/rocky/$releasever/HighAvailability/$basearch/os/
 enabled=1
 gpgcheck=0
 
 [NFV]
 name=CentOS-$releasever - NFV
-baseurl=https://mirrors.ustc.edu.cn/rocky/$releasever/NFV/$basearch/os/
+baseurl=https://download.rockylinux.org/pub/rocky/$releasever/NFV/$basearch/os/
 enabled=1
 gpgcheck=0
 
 [RT]
 name=CentOS-$releasever - RT
-baseurl=https://mirrors.ustc.edu.cn/rocky/$releasever/RT/$basearch/os/
+baseurl=https://download.rockylinux.org/pub/rocky/$releasever/RT/$basearch/os/
 enabled=1
 gpgcheck=0
 
 [ResilientStorage]
 name=CentOS-$releasever - ResilientStorage
-baseurl=https://mirrors.ustc.edu.cn/rocky/$releasever/ResilientStorage/$basearch/os/
+baseurl=https://download.rockylinux.org/pub/rocky/$releasever/ResilientStorage/$basearch/os/
 enabled=1
 gpgcheck=0
 
 [extras]
 name=CentOS-$releasever - Extras
-baseurl=https://mirrors.ustc.edu.cn/rocky/$releasever/extras/$basearch/os/
+baseurl=https://download.rockylinux.org/pub/rocky/$releasever/extras/$basearch/os/
 enabled=1
 gpgcheck=0
 
 [epel-source]
 name=Extra Packages for Enterprise Linux $releasever - $basearch - Source
-baseurl=https://mirrors.ustc.edu.cn/epel/$releasever/Everything/$basearch/
+baseurl=https://dl.fedoraproject.org/pub/epel/$releasever/Everything/$basearch/
 failovermethod=priority
 enabled=1
 gpgcheck=0
 
 [remi_safe]
 name=remi_safe
-baseurl=https://mirrors.ustc.edu.cn/remi/enterprise/$releasever/safe/$basearch/
+baseurl=https://rpms.remirepo.net/enterprise/$releasever/safe/$basearch/
 enabled=1
 gpgcheck=0
 
 [remi]
 name=remi
-baseurl=https://mirrors.ustc.edu.cn/remi/enterprise/$releasever/remi/$basearch/
+baseurl=https://rpms.remirepo.net/enterprise/$releasever/remi/$basearch/
 enabled=1
 gpgcheck=0
 
 [docker]
 name=docker
-baseurl=https://mirrors.ustc.edu.cn/docker-ce/linux/centos/$releasever/$basearch/stable/
+baseurl=https://download.docker.com/linux/rhel/$releasever/$basearch/stable/
 enabled=1
 gpgcheck=0
-
 
 [mysql]
 name=mysql
@@ -80,7 +79,7 @@ gpgcheck=0
 
 [codetiger]
 name=codetiger
-mirrorlist=https://gitee.com/codetiger666/linux/raw/master/scripts/linux/rocky/mirrorlist/nnproj.list
+baseurl=https://codetiger666.github.io/centos_rpms/rocky/$releasever/$basearch/
 enabled=1
 gpgcheck=0
 priority=1
