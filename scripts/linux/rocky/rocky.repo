@@ -53,6 +53,12 @@ failovermethod=priority
 enabled=1
 gpgcheck=0
 
+[postgresql]
+name=postgresql
+baseurl=https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-$releasever-$basearch/
+enabled=1
+gpgcheck=0
+
 [remi_safe]
 name=remi_safe
 baseurl=https://rpms.remirepo.net/enterprise/$releasever/safe/$basearch/
