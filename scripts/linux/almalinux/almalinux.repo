@@ -31,7 +31,7 @@ gpgcheck=0
 [RT]
 name=CentOS-$releasever - RT
 baseurl=https://repo.almalinux.org/almalinux/$releasever/RT/$basearch/os/
-enabled=1
+enabled=0
 gpgcheck=0
 
 [ResilientStorage]
