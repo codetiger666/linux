@@ -1,0 +1,14 @@
+[Unit]
+Description=AppName daemon
+After=network.service
+
+[Service]
+User=root
+Group=root
+Type=forking
+ExecStart=/usr/local/service/AppName/AppName.sh start
+ExecReload=
+ExecStop=/usr/local/service/AppName/AppName.sh stop
+
+[Install]
+WantedBy=multi-user.target

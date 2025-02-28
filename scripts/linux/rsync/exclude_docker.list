@@ -1,0 +1,9 @@
+aarch64
+armv7l
+debug-aarch64
+debug-x86_64
+edge
+nightly
+source
+test
+#Packages

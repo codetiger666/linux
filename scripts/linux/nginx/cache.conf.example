@@ -1,0 +1,24 @@
+server {
+        listen       80;
+        server_name  域名;
+
+        root   html;
+        index index.html index.htm default.html default.htm;
+
+        #access_log  logs/host.access.log  main;
+        location / {
+            root                      html;
+            index                     index.html index.htm default.html default.htm;
+            proxy_cache               content;
+            proxy_cache_valid         200 302 1m;
+            proxy_cache_valid         404 1m;
+            # 说明
+            #proxy_cache              指定缓存键值;
+            #proxy_cache_valid        缓存类型 缓存有效期;
+        }
+        #error_page                    404 /404.html;
+        error_page                    500 502 503 504  /50x.html;
+        location = /50x.html {
+            root                      html;
+        }
+    }

@@ -1,0 +1,4 @@
+https://opentuna.cn/epel/$releasever/$basearch/
+https://mirrors.cloud.tencent.com/epel/$releasever/$basearch/
+https://mirrors.aliyun.com/epel/$releasever/$basearch/
+https://repo.huaweicloud.com/epel/$releasever/$basearch/
