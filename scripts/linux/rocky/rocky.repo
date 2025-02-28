@@ -85,7 +85,7 @@ gpgcheck=0
 
 [codetiger]
 name=codetiger
-baseurl=https://codetiger666.github.io/rpms/rocky/$releasever/$basearch/
+baseurl=https://codetiger666.github.io/rpms/redhat/$releasever/$basearch/
 enabled=1
 gpgcheck=0
 priority=1
