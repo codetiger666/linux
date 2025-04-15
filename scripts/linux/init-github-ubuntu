@@ -10,6 +10,6 @@ libglib2.0-dev libgmp3-dev libltdl-dev libmpc-dev libmpfr-dev libncurses5-dev li
 libpython3-dev libreadline-dev libssl-dev libtool lrzsz mkisofs msmtp ninja-build p7zip p7zip-full \
 patch pkgconf  python3 python3-pyelftools python3-setuptools qemu-utils rsync scons \
 squashfs-tools subversion swig texinfo uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev \
-libclang-dev llvm-dev clang
+libclang-dev llvm-dev clang nodejs npm
 sudo -E apt-get -qq autoremove --purge
 sudo -E apt-get -qq clean
