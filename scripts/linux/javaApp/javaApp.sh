@@ -12,17 +12,21 @@ JAVA_HOME=/usr/local/jdk11
 
 case "$1" in
 start)
+    if ps -ef | grep ${APP_NAME}.jar | grep -v grep > /dev/null ; then
+        echo "${APP_NAME} is runing..."
+        exit 0
+    fi
     $JAVA_HOME/bin/java $JAVA_OPS -jar $PROGRAM_PATH/$APP_NAME.jar $JAVA_COMMAND_LINE > $PROGRAM_PATH/$APP_NAME.log 2>&1 &
     echo $! > $PROGRAM_PATH/$APP_NAME.pid
     ;;
 stop)
-    if [ -e ${PROGRAM_PATH}/${APP_NAME}.pid ];then
-        kill $(cat ${PROGRAM_PATH}/${APP_NAME}.pid)
+    if ps -ef | grep ${APP_NAME}.jar | grep -v grep > /dev/null ; then
+        kill  $(ps -ef | grep ${APP_NAME}.jar | grep -v grep | awk '{print $2}')
         rm $PROGRAM_PATH/$APP_NAME.pid
     fi
     ;;
 status)
-    if [ -e ${PROGRAM_PATH}/${APP_NAME}.pid ];then
+    if ps -ef | grep ${APP_NAME}.jar | grep -v grep > /dev/null ; then
         echo "${APP_NAME} is runing..."
     else
         echo "${APP_NAME} is not runing..."
