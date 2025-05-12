@@ -1,0 +1,11 @@
+[Unit]
+Description=nacos start stop
+After=network.target
+
+[Service]
+User=root
+Group=root
+Type=forking
+Environment="JAVA_HOME=/usr/local/jdk1.8.0_241"
+ExecStart=/usr/local/nacos/bin/startup.sh -m standalone
+ExecStop=/usr/local/nacos/bin/shutdown.sh

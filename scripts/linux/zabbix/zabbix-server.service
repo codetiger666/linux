@@ -1,0 +1,20 @@
+[Unit]
+Description=Zabbix Service
+After=syslog.target
+After=network.target
+
+[Service]
+User=zabbix
+Group=zabbix
+Environment="CONFFILE=/opt/zabbix-server/etc/zabbix_server.conf"
+Type=forking
+Restart=on-failure
+PIDFile=/tmp/zabbix_server.pid
+KillMode=control-group
+ExecStart=/opt/zabbix-server/sbin/zabbix_server -c $CONFFILE
+ExecStop=/bin/kill -SIGTERM $MAINPID
+RestartSec=10s
+TimeoutSec=0
+
+[Install]
+WantedBy=multi-user.target

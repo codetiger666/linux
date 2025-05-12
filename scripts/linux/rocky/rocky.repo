@@ -1,0 +1,97 @@
+[BaseOS]
+name=CentOS-$releasever - Base
+baseurl=https://download.rockylinux.org/pub/rocky/$releasever/BaseOS/$basearch/os/
+enabled=1
+gpgcheck=0
+
+[AppStream]
+name=CentOS-$releasever - AppStream
+baseurl=https://download.rockylinux.org/pub/rocky/$releasever/AppStream/$basearch/os/
+enabled=1
+gpgcheck=0
+
+[CRB]
+name=CentOS-$releasever - CRB
+baseurl=https://download.rockylinux.org/pub/rocky/$releasever/CRB/$basearch/os/
+enabled=1
+gpgcheck=0
+
+[HighAvailability]
+name=CentOS-$releasever - HighAvailability
+baseurl=https://download.rockylinux.org/pub/rocky/$releasever/HighAvailability/$basearch/os/
+enabled=1
+gpgcheck=0
+
+[NFV]
+name=CentOS-$releasever - NFV
+baseurl=https://download.rockylinux.org/pub/rocky/$releasever/NFV/$basearch/os/
+enabled=1
+gpgcheck=0
+
+[RT]
+name=CentOS-$releasever - RT
+baseurl=https://download.rockylinux.org/pub/rocky/$releasever/RT/$basearch/os/
+enabled=1
+gpgcheck=0
+
+[ResilientStorage]
+name=CentOS-$releasever - ResilientStorage
+baseurl=https://download.rockylinux.org/pub/rocky/$releasever/ResilientStorage/$basearch/os/
+enabled=1
+gpgcheck=0
+
+[extras]
+name=CentOS-$releasever - Extras
+baseurl=https://download.rockylinux.org/pub/rocky/$releasever/extras/$basearch/os/
+enabled=1
+gpgcheck=0
+
+[epel-source]
+name=Extra Packages for Enterprise Linux $releasever - $basearch - Source
+baseurl=https://dl.fedoraproject.org/pub/epel/$releasever/Everything/$basearch/
+failovermethod=priority
+enabled=1
+gpgcheck=0
+
+[postgresql]
+name=postgresql
+baseurl=https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-$releasever-$basearch/
+enabled=1
+gpgcheck=0
+
+[remi_safe]
+name=remi_safe
+baseurl=https://rpms.remirepo.net/enterprise/$releasever/safe/$basearch/
+enabled=1
+gpgcheck=0
+
+[remi]
+name=remi
+baseurl=https://rpms.remirepo.net/enterprise/$releasever/remi/$basearch/
+enabled=1
+gpgcheck=0
+
+[docker]
+name=docker
+baseurl=https://download.docker.com/linux/rhel/$releasever/$basearch/stable/
+enabled=1
+gpgcheck=0
+
+[mysql]
+name=mysql
+baseurl=http://repo.mysql.com/yum/mysql-cluster-8.0-community/el/$releasever/$basearch/
+enabled=1
+gpgcheck=0
+
+[codetiger]
+name=codetiger
+baseurl=https://codetiger666.github.io/rpms/redhat/$releasever/$basearch/
+enabled=1
+gpgcheck=0
+priority=1
+
+[sqlserver]
+name=sqlserver
+baseurl=https://packages.microsoft.com/rhel/$releasever/mssql-server-2017/
+enabled=0
+gpgcheck=0

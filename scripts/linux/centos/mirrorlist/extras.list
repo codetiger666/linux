@@ -1,0 +1,4 @@
+https://opentuna.cn/centos/$releasever/extras/$basearch/
+https://mirrors.cloud.tencent.com/centos/$releasever/extras/$basearch/
+https://mirrors.aliyun.com/centos/$releasever/extras/$basearch/
+https://repo.huaweicloud.com/centos/$releasever/extras/$basearch/

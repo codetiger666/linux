@@ -1,0 +1,20 @@
+# 代理tcp示例
+server {
+    # 监听端口
+    listen 993;
+    # 如需ssl使用下面这个
+    #listen 993 ssl;
+    # 证书路径
+    #ssl_certificate 证书文件位置;
+    #ssl_certificate_key 证书key位置;
+    # 客户端超时时间(建议比后端超时时间略长)
+    proxy_timeout 55m; 
+    # 开启protocol代理协议(on/off/v2)
+    proxy_protocol v2;
+    # 请求后端开启ssl
+    proxy_ssl on;
+    # 请求后端关闭ssl证书验证
+    proxy_ssl_verify off;
+    # 后端地址，可以使用upstream
+    proxy_pass 127.0.0.1:9933;
+}

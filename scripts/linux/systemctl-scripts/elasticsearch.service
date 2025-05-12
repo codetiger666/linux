@@ -1,0 +1,17 @@
+[Unit]
+Description=elasticsearch
+Documentation=
+After=network.target remote-fs.target nss-lookup.target
+
+[Service]
+LimitNOFILE=65536
+LimitNPROC=65536
+User=elasticsearch
+Group=elasticsearch
+Type=simple
+ExecStart=/usr/local/elasticsearch/bin/elasticsearch
+ExecReload=
+ExecStop=
+
+[Install]
+WantedBy=multi-user.target

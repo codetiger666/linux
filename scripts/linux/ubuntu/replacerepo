@@ -1,0 +1,33 @@
+cat << EOF > /etc/apt/sources.list
+# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.ustc.edu.cn/ubuntu/ `lsb_release -c --short` main restricted universe multiverse
+# deb-src https://mirrors.ustc.edu.cn/ubuntu/ `lsb_release -c --short` main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ `lsb_release -c --short`-updates main restricted universe multiverse
+# deb-src https://mirrors.ustc.edu.cn/ubuntu/ `lsb_release -c --short`-updates main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ `lsb_release -c --short`-backports main restricted universe multiverse
+# deb-src https://mirrors.ustc.edu.cn/ubuntu/ `lsb_release -c --short`-backports main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ `lsb_release -c --short`-security main restricted universe multiverse
+# deb-src https://mirrors.ustc.edu.cn/ubuntu/ `lsb_release -c --short`-security main restricted universe multiverse
+
+# 预发布软件源，不建议启用
+# deb https://mirrors.ustc.edu.cn/ubuntu/ `lsb_release -c --short`-proposed main restricted universe multiverse
+# deb-src https://mirrors.ustc.edu.cn/ubuntu/ `lsb_release -c --short`-proposed main restricted universe multiverse
+
+# 自定义源
+# mysql-8.0
+deb https://opentuna.cn/mysql/apt/ubuntu $(lsb_release -c --short) mysql-8.0
+# docker-ce
+deb https://opentuna.cn/docker-ce/linux/ubuntu/ $(lsb_release -c --short) stable
+# mongodb
+deb https://opentuna.cn/mongodb/apt/ubuntu/dists/$(lsb_release -c --short)/mongodb-org/5.0/ multiverse
+
+# 旧版镜像
+# python
+deb https://launchpad.proxy.ustclug.org/deadsnakes/ppa/ubuntu/ $(lsb_release -c --short) main
+# php
+deb https://launchpad.proxy.ustclug.org/deadsnakes/ppa/ubuntu/ $(lsb_release -c --short) main
+EOF
+apt update
+apt install gnupg2 -y
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8C718D3B5072E1F5 7EA0A9C3F273FCD8 BA6932366A755776 4F4EA0AAE5267A6C 467B942D3A79BD29
+apt update

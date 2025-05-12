@@ -1,0 +1,14 @@
+[Unit]
+Description=Xray Server Service
+After=network.target
+
+[Service]
+Type=simple
+User=xray
+Group=xray
+ExecStart=/usr/local/xray/xray -confdir /usr/local/xray/conf
+ExecReload=
+ExecStop=pkill xray
+
+[Install]
+WantedBy=multi-user.target

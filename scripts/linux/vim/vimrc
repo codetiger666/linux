@@ -1,0 +1,149 @@
+"此配置文件需要放置在/etc/vimrc
+
+
+if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
+   set fileencodings=ucs-bom,utf-8,latin1
+endif
+
+set nocompatible        " Use Vim defaults (much better!)
+set bs=indent,eol,start         " allow backspacing over everything in insert mode
+"set ai                 " always set autoindenting on
+"set backup             " keep a backup file
+set viminfo='20,\"50    " read/write a .viminfo file, don't store more
+                        " than 50 lines of registers
+set history=50          " keep 50 lines of command line history
+set ruler               " show the cursor position all the time
+
+" Only do this part when compiled with support for autocommands
+if has("autocmd")
+  augroup redhat
+  autocmd!
+  " In text files, always limit the width of text to 78 characters
+  " autocmd BufRead *.txt set tw=78
+  " When editing a file, always jump to the last cursor position
+  autocmd BufReadPost *
+  \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+  \   exe "normal! g'\"" |
+  \ endif
+  " don't write swapfile on most commonly used directories for NFS mounts or USB sticks
+  autocmd BufNewFile,BufReadPre /media/*,/run/media/*,/mnt/* set directory=~/tmp,/var/tmp,/tmp
+  " start with spec file template
+  autocmd BufNewFile *.spec 0r /usr/share/vim/vimfiles/template.spec
+  augroup END
+endif
+
+if has("cscope") && filereadable("/usr/bin/cscope")
+   set csprg=/usr/bin/cscope
+   set csto=0
+   set cst
+   set nocsverb
+   " add any database in current directory
+   if filereadable("cscope.out")
+      cs add $PWD/cscope.out
+   " else add database pointed to by environment
+   elseif $CSCOPE_DB != ""
+      cs add $CSCOPE_DB
+   endif
+   set csverb
+endif
+
+" Switch syntax highlighting on, when the terminal has colors
+" Also switch on highlighting the last used search pattern.
+if &t_Co > 2 || has("gui_running")
+  syntax on
+  set hlsearch
+endif
+
+filetype plugin on
+
+if &term=="xterm"
+     set t_Co=8
+     set t_Sb=m
+     set t_Sf=m
+endif
+
+" Don't wake up system with blinking cursor:
+" http://www.linuxpowertop.org/known.php
+let &guicursor = &guicursor . ",a:blinkon0"
+
+
+"以下为自定义配置
+"去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限
+set nocompatible
+"显示行号
+"set number
+"防止复制时复制到行号
+"set mouse=a
+"检测文件的类型
+filetype on
+"语法高亮度显示
+syntax on
+"下面两行在进行编写代码时，在格式对起上很有用；
+"第一行，vim使用自动对起，也就是把当前行的对起格式应用到下一行；
+"第二行，依据上面的对起格式，智能的选择对起方式，对于类似C语言编
+"写上很有用
+set autoindent
+"set smartinden
+"第一行设置tab键为4个空格，第二行设置当行之间交错时使用4个空格
+set tabstop=4
+set shiftwidth=4
+"替换tab为空格
+set expandtab
+"Tab转为2个空格
+set softtabstop=2
+"使用配色方案
+colorscheme desert
+"允许使用插件
+filetype plugin on
+filetype plugin indent on
+"当文件被外部改变时自动读取
+set autoread
+"高亮光标所在行
+set cursorline
+"取消光标闪烁
+set novisualbell
+"为了方便查看，长行自动换行
+set wrap
+"状态栏显示当前执行的命令
+set showcmd
+"粘贴时保持格式
+set paste
+"高亮显示匹配的括号
+set showmatch
+"标尺功能，显示当前光标所在行列号
+set ruler
+"设置命令行高度为1
+set cmdheight=1
+"在搜索的时候忽略大小写
+set ignorecase
+"高亮被搜索的句子
+set hlsearch
+"在搜索时，输入的词句的逐字符高亮（类似firefox的搜索）
+set incsearch
+"允许使用退格键，或set backspace=2
+set backspace=eol,start,indent
+"设定默认解码
+set fenc=utf-8
+set fencs=utf-8,usc-bom,euc-jp,gb18030,gbk,gb2312,cp936
+"设定编码
+set enc=utf-8
+set fileencodings=ucs-bom,utf-8,chinese
+set langmenu=zh_CN.UTF-8
+language message zh_CN.UTF-8
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+"设置命令行高度为1
+set cmdheight=1
+"自动补全
+filetype plugin indent on
+set completeopt=longest,menu
+"自动补全命令时候使用菜单式匹配列表
+set wildmenu
+set clipboard=unnamedplus
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType java set omnifunc=javacomplete#Complet
