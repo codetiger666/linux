@@ -25,8 +25,9 @@ gpgcheck=0
 [NFV]
 name=Rocky $releasever - NFV
 baseurl=https://download.rockylinux.org/pub/rocky/$releasever/NFV/$basearch/os/
-enabled=0
+enabled=1
 gpgcheck=0
+skip_if_unavailable=1
 
 [RT]
 name=Rocky $releasever - RT
@@ -37,8 +38,9 @@ gpgcheck=0
 [ResilientStorage]
 name=Rocky $releasever - ResilientStorage
 baseurl=https://download.rockylinux.org/pub/rocky/$releasever/ResilientStorage/$basearch/os/
-enabled=0
+enabled=1
 gpgcheck=0
+skip_if_unavailable=1
 
 [extras]
 name=Rocky $releasever - Extras
@@ -73,25 +75,29 @@ gpgcheck=0
 
 [docker]
 name=Rocky $releasever - Docker
-baseurl=https://download.docker.com/linux/rhel/9/$basearch/stable/
+baseurl=https://download.docker.com/linux/rhel/$releasever/$basearch/stable/
 enabled=1
 gpgcheck=0
+skip_if_unavailable=1
 
 [mysql]
 name=Rocky $releasever - Mysql
-baseurl=http://repo.mysql.com/yum/mysql-cluster-8.0-community/el/9/$basearch/
+baseurl=http://repo.mysql.com/yum/mysql-cluster-8.0-community/el/$releasever/$basearch/
 enabled=1
 gpgcheck=0
+skip_if_unavailable=1
 
 [codetiger]
 name=Rocky $releasever - codetiger
 baseurl=https://codetiger666.github.io/rpms/redhat/$releasever/$basearch/
 enabled=1
 gpgcheck=0
+skip_if_unavailable=1
 priority=1
 
 [sqlserver]
 name=Rocky $releasever - Sql Server
 baseurl=https://packages.microsoft.com/rhel/$releasever/mssql-server-2017/
-enabled=0
+enabled=1
 gpgcheck=0
+skip_if_unavailable=1
