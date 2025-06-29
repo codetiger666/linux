@@ -9,18 +9,21 @@ name=Rocky $releasever - AppStream
 baseurl=https://download.rockylinux.org/pub/rocky/$releasever/AppStream/$basearch/os/
 enabled=1
 gpgcheck=0
+skip_if_unavailable=1
 
 [CRB]
 name=Rocky $releasever - CRB
 baseurl=https://download.rockylinux.org/pub/rocky/$releasever/CRB/$basearch/os/
 enabled=1
 gpgcheck=0
+skip_if_unavailable=1
 
 [HighAvailability]
 name=Rocky $releasever - HighAvailability
 baseurl=https://download.rockylinux.org/pub/rocky/$releasever/HighAvailability/$basearch/os/
 enabled=1
 gpgcheck=0
+skip_if_unavailable=1
 
 [NFV]
 name=Rocky $releasever - NFV
@@ -34,6 +37,7 @@ name=Rocky $releasever - RT
 baseurl=https://download.rockylinux.org/pub/rocky/$releasever/RT/$basearch/os/
 enabled=1
 gpgcheck=0
+skip_if_unavailable=1
 
 [ResilientStorage]
 name=Rocky $releasever - ResilientStorage
@@ -60,18 +64,21 @@ name=Rocky $releasever - Postgresql
 baseurl=https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-$releasever-$basearch/
 enabled=1
 gpgcheck=0
+skip_if_unavailable=1
 
 [remi_safe]
 name=Rocky $releasever - Remi Safe
 baseurl=https://rpms.remirepo.net/enterprise/$releasever/safe/$basearch/
 enabled=1
 gpgcheck=0
+skip_if_unavailable=1
 
 [remi]
 name=Rocky $releasever - Remi
 baseurl=https://rpms.remirepo.net/enterprise/$releasever/remi/$basearch/
 enabled=1
 gpgcheck=0
+skip_if_unavailable=1
 
 [docker]
 name=Rocky $releasever - Docker
