@@ -106,6 +106,6 @@ metadata_expire=0
 [sqlserver]
 name=Rocky $releasever - Sql Server
 baseurl=https://packages.microsoft.com/rhel/$releasever/mssql-server-2017/
-enabled=1
+enabled=0
 gpgcheck=0
 skip_if_unavailable=1
