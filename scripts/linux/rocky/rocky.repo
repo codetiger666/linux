@@ -101,6 +101,7 @@ enabled=1
 gpgcheck=0
 skip_if_unavailable=1
 priority=1
+metadata_expire=0
 
 [sqlserver]
 name=Rocky $releasever - Sql Server
