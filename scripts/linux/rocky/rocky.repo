@@ -109,3 +109,17 @@ baseurl=https://packages.microsoft.com/rhel/$releasever/mssql-server-2017/
 enabled=0
 gpgcheck=0
 skip_if_unavailable=1
+
+[el-repo]
+name=Rocky $releasever - ELRepo
+baseurl=https://elrepo.org/linux/elrepo/el$releasever/$basearch/
+enabled=1
+gpgcheck=0
+skip_if_unavailable=1
+
+[el-repo-kernel]
+name=Rocky $releasever - ELRepo Kernel
+baseurl=https://elrepo.org/linux/kernel/el$releasever/$basearch/
+enabled=1
+gpgcheck=0
+skip_if_unavailable=1
