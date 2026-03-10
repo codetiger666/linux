@@ -1,8 +1,7 @@
-#!/bin/bash
-# 应用名称
-APP_NAME=app
-# 应用运行目录
+#!/usr/bin/bash
 PROGRAM_PATH=$(dirname "$(realpath "$0")")
+JAVA_HOME=/usr/local/jdk/11
+APP_NAME=api
 PID_FILE=$PROGRAM_PATH/${APP_NAME}.pid
 
 getStatus() {
@@ -23,7 +22,8 @@ start)
         echo "${APP_NAME} is runing..."
         exit 1
     else
-        $PROGRAM_PATH/$APP_NAME > $PROGRAM_PATH/$APP_NAME.log 2>&1 &
+        cd $PROGRAM_PATH
+        ${JAVA_HOME}/bin/java -Xms128m -Xmx256m -jar ${APP_NAME}.jar --spring.profiles.active=pro --server.port=20504 > ${PROGRAM_PATH}/${APP_NAME}.log 2>&1 &
         echo $! > $PROGRAM_PATH/$APP_NAME.pid
     fi
     ;;
@@ -44,6 +44,7 @@ status)
     ;;
 restart)
     $0 stop
+    sleep 5
     $0 start
     ;;
 *)
