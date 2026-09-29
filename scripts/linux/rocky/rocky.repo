@@ -100,6 +100,7 @@ baseurl=https://codetiger666.github.io/rpms/redhat/$releasever/$basearch/
 enabled=1
 gpgcheck=0
 skip_if_unavailable=1
+module_hotfixes=true
 priority=1
 metadata_expire=0
 
