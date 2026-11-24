@@ -90,13 +90,23 @@ skip_if_unavailable=1
 [mysql]
 name=Rocky $releasever - Mysql
 baseurl=http://repo.mysql.com/yum/mysql-cluster-8.0-community/el/$releasever/$basearch/
-enabled=1
+enabled=0
 gpgcheck=0
 skip_if_unavailable=1
 
 [codetiger]
 name=Rocky $releasever - codetiger
 baseurl=https://codetiger666.github.io/rpms/redhat/$releasever/$basearch/
+enabled=1
+gpgcheck=0
+skip_if_unavailable=1
+module_hotfixes=true
+priority=1
+metadata_expire=0
+
+[codetiger-large]
+name=Rocky $releasever - codetiger-large
+baseurl=https://codetiger666.github.io/rpms_large_file/redhat/$releasever/$basearch/
 enabled=1
 gpgcheck=0
 skip_if_unavailable=1

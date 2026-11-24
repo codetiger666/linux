@@ -15,30 +15,35 @@ name=AlmaLinux-$releasever - CRB
 baseurl=https://repo.almalinux.org/almalinux/$releasever/CRB/$basearch/os/
 enabled=1
 gpgcheck=0
+skip_if_unavailable=1
 
 [HighAvailability]
 name=AlmaLinux-$releasever - HighAvailability
 baseurl=https://repo.almalinux.org/almalinux/$releasever/HighAvailability/$basearch/os/
 enabled=1
 gpgcheck=0
+skip_if_unavailable=1
 
 [NFV]
 name=AlmaLinux-$releasever - NFV
 baseurl=https://repo.almalinux.org/almalinux/$releasever/NFV/$basearch/os/
 enabled=0
 gpgcheck=0
+skip_if_unavailable=1
 
 [RT]
 name=AlmaLinux-$releasever - RT
 baseurl=https://repo.almalinux.org/almalinux/$releasever/RT/$basearch/os/
 enabled=0
 gpgcheck=0
+skip_if_unavailable=1
 
 [extras]
 name=AlmaLinux-$releasever - Extras
 baseurl=https://repo.almalinux.org/almalinux/$releasever/extras/$basearch/os/
 enabled=1
 gpgcheck=0
+skip_if_unavailable=1
 
 [epel-source]
 name=Extra Packages for Enterprise Linux $releasever - $basearch - Source
@@ -46,46 +51,66 @@ baseurl=https://dl.fedoraproject.org/pub/epel/$releasever/Everything/$basearch/
 failovermethod=priority
 enabled=1
 gpgcheck=0
+skip_if_unavailable=1
 
 [postgresql]
 name=postgresql
 baseurl=https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-$releasever-$basearch/
 enabled=1
 gpgcheck=0
+skip_if_unavailable=1
 
 [remi_safe]
 name=remi_safe
 baseurl=https://rpms.remirepo.net/enterprise/$releasever/safe/$basearch/
 enabled=1
 gpgcheck=0
+skip_if_unavailable=1
 
 [remi]
 name=remi
 baseurl=https://rpms.remirepo.net/enterprise/$releasever/remi/$basearch/
 enabled=1
 gpgcheck=0
+skip_if_unavailable=1
 
 [docker]
 name=docker
 baseurl=https://download.docker.com/linux/rhel/$releasever/$basearch/stable/
 enabled=1
 gpgcheck=0
+skip_if_unavailable=1
 
 [mysql]
 name=mysql
 baseurl=http://repo.mysql.com/yum/mysql-cluster-8.4-community/el/$releasever/$basearch/
-enabled=1
+enabled=0
 gpgcheck=0
+skip_if_unavailable=1
 
 [codetiger]
 name=codetiger
 baseurl=https://codetiger666.github.io/rpms/redhat/$releasever/$basearch/
 enabled=1
 gpgcheck=0
+skip_if_unavailable=1
+module_hotfixes=true
 priority=1
+metadata_expire=0
+
+[codetiger-large]
+name=codetiger-large
+baseurl=https://codetiger666.github.io/rpms_large_file/redhat/$releasever/$basearch/
+enabled=1
+gpgcheck=0
+skip_if_unavailable=1
+module_hotfixes=true
+priority=1
+metadata_expire=0
 
 [sqlserver]
 name=sqlserver
 baseurl=https://packages.microsoft.com/rhel/$releasever/mssql-server-2017/
 enabled=0
 gpgcheck=0
+skip_if_unavailable=1
