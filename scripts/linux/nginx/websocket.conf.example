@@ -2,7 +2,7 @@ server {
     listen       80;
     server_name  域名;
     location / {
-        include        conf/websocket.conf;
+        include        websocket.conf;
         proxy_pass     http://127.0.0.1:9000;
     } 
 }

@@ -21,7 +21,7 @@ server {
     # 请求日志
     access_log /home/wwwlogs/test.com.log  main;
     location / {
-        include conf/proxy.conf;
+        include proxy.conf;
         # 代理地址
         proxy_pass https://127.0.0.1:4433;
     }
